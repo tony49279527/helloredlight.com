@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系我们与批发询价 | Hello Red Light 工厂直销</title>
+    <meta name="description" content="咨询我们的专业红光理疗板。联系我们的全球 B2B 团队，获取代发货、批发或区域分销商报价。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <a href="/zh/index.html" class="text-2xl font-bold tracking-tight text-brand-dark">
+                HELLO<span class="text-brand-primary">REDLIGHT</span> <span class="text-xs uppercase ml-1 opacity-60">B2B</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="/zh/products.html" class="text-gray-600 hover:text-brand-primary font-medium">产品中心</a>
+                <a href="/zh/factory.html" class="text-gray-600 hover:text-brand-primary font-medium">工厂实力</a>
+                <a href="/zh/cases.html" class="text-gray-600 hover:text-brand-primary font-medium">成功案例</a>
+                <a href="/zh/certifications.html" class="text-gray-600 hover:text-brand-primary font-medium">认证资质</a>
+                <a href="/zh/partnerships.html" class="text-gray-600 hover:text-brand-primary font-medium">合作方式</a>
+                <a href="/zh/contact.html" class="btn btn-primary text-sm px-4 py-2 pointer-events-none">立即询价</a>
+                <div class="border-l border-gray-300 pl-4">
+                    <a href="/contact.html" class="text-gray-500 hover:text-brand-dark">EN</a> | 
+                    <span class="font-bold text-brand-primary">ZH</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 flex-grow">
+        <div class="container max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
+            
+            <!-- Company Info Left Side -->
+            <div class="w-full lg:w-1/3">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6 font-sans">携手打造卓越品牌</h1>
+                <p class="text-gray-600 mb-10 text-lg">直接联系我们，索取 OEM 定制方案或洽谈区域代理。我们的工程师将在 12 小时内回复您的需求。</p>
+                
+                <div class="space-y-6 text-left">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center text-xl text-brand-primary shrink-0">📍</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">生产工厂</h4>
+                            <p class="text-gray-600 text-sm mt-1">中国广东省深圳市高新技术产业园</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center text-xl text-brand-primary shrink-0">✉️</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">B2B 直销邮箱</h4>
+                            <p class="text-sm mt-1"><a href="mailto:sales@helloredlight.com" class="text-brand-primary hover:underline font-semibold">sales@helloredlight.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Placeholder -->
+                <div class="mt-12 bg-gray-200 w-full h-64 rounded-xl flex items-center justify-center text-gray-500 border border-gray-300">
+                    [工厂地理位置示意图]
+                </div>
+            </div>
+
+            <!-- Forms Container -->
+            <div class="w-full lg:w-2/3 bg-white p-6 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+                <!-- Dual Form Tabs Logic -->
+                <div class="flex border-b border-gray-200 mb-8" id="form-tabs">
+                    <button class="w-1/2 text-center py-4 font-bold text-brand-primary border-b-2 border-brand-primary tab-btn" data-target="inquiry">
+                        基本询价 / 订单
+                    </button>
+                    <button class="w-1/2 text-center py-4 font-bold text-gray-500 border-b-2 border-transparent hover:text-brand-primary tab-btn" data-target="distributor">
+                        分销商申请
+                    </button>
+                </div>
+                
+                <!-- 1. Inquiry Form -->
+                <div id="inquiry" class="form-section block">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 text-left">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="来自 HelloRedLight.com 的新 B2B 询价">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">您的姓名*</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">公司全称*</label>
+                                <input type="text" name="company" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">联系电子邮箱*</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">联系电话 / WhatsApp*</label>
+                                <input type="text" name="phone_whatsapp" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">产品类别*</label>
+                                <select name="product_category" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none text-sm">
+                                    <option value="">请选择类别...</option>
+                                    <option value="panels">LED理疗板</option>
+                                    <option value="beds">理疗舱 & 理疗床</option>
+                                    <option value="masks">美容面罩</option>
+                                    <option value="custom">全方位 OEM/ODM 定制</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">预计采购数量*</label>
+                                <input type="number" min="1" name="quantity" required placeholder="如：10" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">目标市场 / 销往国家*</label>
+                            <input type="text" name="target_market" required placeholder="例如：美国, 德国, 中东地区..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">备注信息 / 定制化需求</label>
+                            <textarea name="message" rows="4" placeholder="是否有特定波阶（Wavelength）偏好或 Logo 镭雕需求？" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none resize-y text-sm"></textarea>
+                        </div>
+                        
+                        <!-- Honeypot -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" class="btn btn-primary w-full py-4 text-white font-bold text-lg rounded shadow-lg tracking-wide hover:-translate-y-1 transition-transform">递交询价</button>
+                    </form>
+                </div>
+                
+                <!-- 2. Distributor Form -->
+                <div id="distributor" class="form-section hidden">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 text-left">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="来自 HelloRedLight.com 的新 B2B 分销商申请">
+                        
+                        <div class="text-sm bg-blue-50 text-blue-800 p-4 rounded-lg mb-6 border border-blue-100 flex items-center">
+                            <span class="mr-2">💡</span> 区域分销商申请将进入深度审核流程。请提供确切的覆盖市场及过往经验。
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">公司法律全称*</label>
+                                <input type="text" name="company" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">关键联系人*</label>
+                                <input type="text" name="contact" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">企业邮箱*</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">联系电话*</label>
+                                <input type="text" name="phone" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">目标市场 / 覆盖区域*</label>
+                                <input type="text" name="market" required placeholder="如：华东地区, 西部代理..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">预计月采购金额 ($)*</label>
+                                <select name="volume" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none">
+                                    <option value="">请选择范围...</option>
+                                    <option value="under5k">&lt; $5,000</option>
+                                    <option value="5k_20k">$5,000 - $20,000</option>
+                                    <option value="20k_50k">$20,000 - $50,000</option>
+                                    <option value="above50k">超过 $50,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" class="btn btn-accent w-full py-4 text-white font-bold text-lg rounded shadow-lg tracking-wide hover:-translate-y-1 transition-transform">申请成为合作伙伴</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#0b0b14] text-gray-400 py-6 text-center text-sm border-t border-gray-800">
+        &copy; 2026 Hello Red Light B2B 制造厂.
+    </footer>
+    
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.form-section');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-target');
+                tabs.forEach(t => {
+                    t.classList.remove('text-brand-primary', 'border-brand-primary');
+                    t.classList.add('text-gray-500', 'border-transparent');
+                });
+                sections.forEach(s => {
+                    s.classList.remove('block');
+                    s.classList.add('hidden');
+                });
+                tab.classList.remove('text-gray-500', 'border-transparent');
+                tab.classList.add('text-brand-primary', 'border-brand-primary');
+                document.getElementById(target).classList.remove('hidden');
+                document.getElementById(target).classList.add('block');
+            });
+        });
+    </script>
+</body>
+</html>

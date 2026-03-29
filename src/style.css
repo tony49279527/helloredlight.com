@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #0066CC;   /* Professional Blue */
+  --color-brand-dark: #1A1A2E;      /* Dark Background */
+  --color-brand-accent: #FF6B35;    /* Orange Red */
+  --color-brand-light: #f9f9f9;     
+  --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-white font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 font-semibold rounded-md transition-colors duration-300 ease-in-out text-center cursor-pointer;
+  }
+  .btn-primary {
+    @apply bg-brand-primary text-white shadow-md hover:shadow-lg hover:bg-blue-700;
+  }
+  .btn-accent {
+    @apply bg-brand-accent text-white shadow-md hover:shadow-lg hover:bg-orange-600;
+  }
+  .btn-secondary {
+    @apply bg-transparent border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white;
+  }
+  .btn-outline-white {
+    @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark;
+  }
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-center text-brand-dark;
+  }
+}
+
+/* Custom Utilities & Animations */
+@layer utilities {
+  .animate-reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  .reveal-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+.sticky-mobile-cta {
+  @apply fixed bottom-0 left-0 right-0 z-[60] p-4 bg-white/80 backdrop-blur-md border-t border-gray-200 md:hidden flex gap-3 shadow-[0_-10px_30px_rgba(0,0,0,0.1)];
+}
