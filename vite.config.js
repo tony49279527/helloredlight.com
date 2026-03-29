@@ -19,6 +19,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         technology: resolve(__dirname, 'technology.html'),
         blog: resolve(__dirname, 'blog/index.html'),
+        error404: resolve(__dirname, '404.html'),
         zh_main: resolve(__dirname, 'zh/index.html'),
         zh_products: resolve(__dirname, 'zh/products.html'),
         zh_factory: resolve(__dirname, 'zh/factory.html'),

@@ -56,6 +56,12 @@ htmlFiles.forEach(file => {
       // Inject before </head>
       content = content.replace('</head>', ogTags + '\n</head>');
     }
+    
+    // Check if Favicon exists
+    if (!content.includes('rel="icon"')) {
+      const faviconTag = '\n    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />';
+      content = content.replace('</head>', faviconTag + '\n</head>');
+    }
   }
 
   // Update Organization Schema in index.html & zh/index.html to add LinkedIn
