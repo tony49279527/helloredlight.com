@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://helloredlight.com/" />
+    <meta property="og:title" content="联系我们与批发询价 | Hello Red Light 工厂直销" />
+    <meta property="og:description" content="咨询我们的专业红光理疗板。联系我们的全球 B2B 团队，获取代发货、批发或区域分销商报价。" />
+    <meta property="og:image" content="https://helloredlight.com/images/og-cover.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="联系我们与批发询价 | Hello Red Light 工厂直销" />
+    <meta property="twitter:description" content="咨询我们的专业红光理疗板。联系我们的全球 B2B 团队，获取代发货、批发或区域分销商报价。" />
+    <meta property="twitter:image" content="https://helloredlight.com/images/og-cover.jpg" />
+
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
     <!-- Header -->
@@ -141,6 +153,8 @@
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 text-left">
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         <input type="hidden" name="subject" value="来自 HelloRedLight.com 的新 B2B 分销商申请">
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         
                         <div class="text-sm bg-blue-50 text-blue-800 p-4 rounded-lg mb-6 border border-blue-100 flex items-center">
                             <span class="mr-2">💡</span> 区域分销商申请将进入深度审核流程。请提供确切的覆盖市场及过往经验。

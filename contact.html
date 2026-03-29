@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://helloredlight.com/" />
+    <meta property="og:title" content="Contact Us & Wholesale Inquiry | Hello Red Light" />
+    <meta property="og:description" content="Inquire about our professional red light therapy panels. Contact our global B2B team for dropshipping, wholesale, or distributorship pricing." />
+    <meta property="og:image" content="https://helloredlight.com/images/og-cover.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Contact Us & Wholesale Inquiry | Hello Red Light" />
+    <meta property="twitter:description" content="Inquire about our professional red light therapy panels. Contact our global B2B team for dropshipping, wholesale, or distributorship pricing." />
+    <meta property="twitter:image" content="https://helloredlight.com/images/og-cover.jpg" />
+
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
     <!-- Header -->
@@ -80,6 +92,8 @@
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         <input type="hidden" name="subject" value="New B2B Inquiry Form from HelloRedLight.com">
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -152,10 +166,12 @@
                 <div id="distributor" class="form-section hidden">
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                        <input type="hidden" name="subject" value="New B2B Distributor App from HelloRedLight.com">
+                        <input type="hidden" name="subject" value="Distributor Application from HelloRedLight.com">
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         
                         <div class="text-sm bg-blue-50 text-blue-800 p-4 rounded-lg mb-6 border border-blue-100 flex items-center">
-                            <span class="mr-2">\uD83D\uDCA1</span> Regional Distributorship applications are thoroughly reviewed. Please provide exact target markets.
+                            <span class="mr-2">💡</span> Regional Distributorship applications are thoroughly reviewed. Please provide exact target markets.
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
