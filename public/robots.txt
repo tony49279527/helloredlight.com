@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block common non-relevant crawling
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-login.php
-Disallow: /*?*
-
 Sitemap: https://helloredlight.com/sitemap.xml
