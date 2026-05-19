@@ -24,8 +24,10 @@
       "logo": "https://helloredlight.com/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+86-000-0000",
-        "contactType": "wholesale sales"
+        "telephone": "+86-755-0000-0000",
+        "contactType": "wholesale sales",
+        "areaServed": "Global",
+        "availableLanguage": ["English", "Chinese"]
       },
       "sameAs": [
         "https://www.linkedin.com/company/helloredlight/"
@@ -59,6 +61,23 @@
         "item": "https://helloredlight.com/"
     }
       ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Hello Red Light B2B",
+      "url": "https://helloredlight.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://helloredlight.com/?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 </head>
