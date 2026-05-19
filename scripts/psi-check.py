@@ -7,7 +7,34 @@ Records historical scores and flags regressions.
 import sys, json, os, urllib.request, ssl, time
 from datetime import datetime
 
-API_KEY = "AIzaSyB0aX1_negquoXHRv1ZiIfo7rseHuv7DKI"
+# Load API key from project config, NEVER hardcode
+def load_psi_key():
+    config_paths = [
+        ".hermes/config.json",
+        "config.json",
+        "scripts/config.json",
+    ]
+    for p in config_paths:
+        if os.path.exists(p):
+            try:
+                with open(p, "r") as f:
+                    cfg = json.load(f)
+                    key = cfg.get("google_psi_key")
+                    if key:
+                        return key
+            except Exception:
+                continue
+    # Fallback: environment variable
+    env_key = os.environ.get("GOOGLE_PSI_KEY")
+    if env_key:
+        return env_key
+    raise RuntimeError(
+        "No Google PSI API key found. "
+        "Place it in .hermes/config.json as {'google_psi_key': '...'} "
+        "or set GOOGLE_PSI_KEY environment variable."
+    )
+
+API_KEY = load_psi_key()
 BASE_URL = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
 STRATEGIES = ["mobile", "desktop"]
 SCORE_THRESHOLD = 60  # Red alert below this
