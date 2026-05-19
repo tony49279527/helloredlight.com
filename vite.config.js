@@ -37,6 +37,8 @@ export default defineConfig({
         zh_partnerships: resolve(__dirname, 'zh/partnerships.html'),
         zh_contact: resolve(__dirname, 'zh/contact.html'),
         zh_technology: resolve(__dirname, 'zh/technology.html'),
+        faq: resolve(__dirname, 'faq.html'),
+        zh_faq: resolve(__dirname, 'zh/faq.html'),
       }
     }
   }
