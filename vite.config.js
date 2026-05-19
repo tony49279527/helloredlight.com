@@ -39,6 +39,7 @@ export default defineConfig({
         zh_technology: resolve(__dirname, 'zh/technology.html'),
         faq: resolve(__dirname, 'faq.html'),
         zh_faq: resolve(__dirname, 'zh/faq.html'),
+        zh_productDetail: resolve(__dirname, 'zh/product-detail.html'),
       }
     }
   }
