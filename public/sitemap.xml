@@ -126,6 +126,14 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Error Pages -->
+  <url>
+    <loc>https://helloredlight.com/404</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
   <!-- Chinese Core Pages -->
   <!-- NOTE: /zh/ pages require the Chinese build to be deployed. -->
   <url>
