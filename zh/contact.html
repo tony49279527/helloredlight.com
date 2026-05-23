@@ -56,7 +56,21 @@
   "@type": "ContactPage",
   "name": "联系我们与批发询价",
   "description": "联系 Hello Red Light 全球 B2B 团队获取报价",
-  "url": "https://helloredlight.com/zh/contact"
+  "url": "https://helloredlight.com/zh/contact",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Hello Red Light B2B",
+    "telephone": "+86 183 0928 5711",
+    "email": "sales@helloredlight.com",
+    "url": "https://helloredlight.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+86 183 0928 5711",
+      "contactType": "wholesale sales",
+      "areaServed": "Global",
+      "availableLanguage": ["Chinese", "English"]
+    }
+  }
 }
 </script>
 </head>
@@ -96,7 +110,7 @@
                         <div class="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center text-xl text-brand-primary shrink-0">📍</div>
                         <div class="ml-4">
                             <h4 class="font-bold text-gray-900">生产工厂</h4>
-                            <p class="text-gray-600 text-sm mt-1">中国广东省深圳市高新技术产业园</p>
+                            <p class="text-gray-600 text-sm mt-1">中国广东省广州市番禺区番禺大道北555号天安节能科技园创新大厦B3栋1208室，邮编 511400</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -106,11 +120,20 @@
                             <p class="text-sm mt-1"><a href="mailto:sales@helloredlight.com" class="text-brand-primary hover:underline font-semibold">sales@helloredlight.com</a></p>
                         </div>
                     </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center text-xl text-brand-primary shrink-0">☎️</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">电话 / WhatsApp</h4>
+                            <p class="text-sm mt-1"><a href="tel:+8618309285711" class="text-brand-primary hover:underline font-semibold">+86 183 0928 5711</a></p>
+                            <p class="text-xs text-gray-500 mt-1"><a href="https://wa.me/8618309285711" class="hover:underline">点击进入 WhatsApp 沟通</a></p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Google Map Placeholder -->
-                <div class="mt-12 bg-gray-200 w-full h-64 rounded-xl flex items-center justify-center text-gray-500 border border-gray-300">
-                    [工厂地理位置示意图]
+                <div class="mt-12 bg-white w-full rounded-xl border border-gray-200 p-6 shadow-sm text-left">
+                    <h3 class="font-bold text-gray-900 mb-3">采购尽调资料</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">合格买家可申请合规资料包，内容包括认证扫描件、测试报告索引、外箱尺寸、包装配置、样品流程说明，以及当前评估 SKU 对应的技术规格书。</p>
+                    <a href="/zh/resources.html" class="inline-block mt-4 text-sm font-semibold text-brand-primary hover:underline">查看采购资料中心</a>
                 </div>
             </div>
 
@@ -180,6 +203,18 @@
                             <label class="block text-sm font-bold text-gray-700 mb-1">备注信息 / 定制化需求</label>
                             <textarea name="message" rows="4" placeholder="是否有特定波阶（Wavelength）偏好或 Logo 镭雕需求？" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-primary outline-none resize-y text-sm"></textarea>
                         </div>
+
+                        <fieldset>
+                            <legend class="block text-sm font-bold text-gray-700 mb-3">希望同步提供的资料</legend>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600">
+                                <label class="flex items-center gap-2"><input type="checkbox" name="requested_materials[]" value="spec-sheet"> 产品规格书</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="requested_materials[]" value="compliance-pack"> 合规资料包</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="requested_materials[]" value="packaging-spec"> 包装与外箱参数</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="requested_materials[]" value="sample-workflow"> 打样流程说明</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="requested_materials[]" value="oem-worksheet"> OEM 需求表</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="requested_materials[]" value="lead-time-plan"> 交期与排产说明</label>
+                            </div>
+                        </fieldset>
                         
                         <!-- Honeypot -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -239,6 +274,18 @@
                             </div>
                         </div>
 
+                        <fieldset>
+                            <legend class="block text-sm font-bold text-gray-700 mb-3">优先希望获得的信息</legend>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600">
+                                <label class="flex items-center gap-2"><input type="checkbox" name="priority_follow_up[]" value="exclusive-rights"> 区域独家政策</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="priority_follow_up[]" value="price-list"> 区域价格表</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="priority_follow_up[]" value="marketing-assets"> 市场素材包</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="priority_follow_up[]" value="compliance-pack"> 合规资料包</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="priority_follow_up[]" value="sample-policy"> 打样与演示政策</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="priority_follow_up[]" value="lead-time"> 交期与备货计划</label>
+                            </div>
+                        </fieldset>
+
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                         <button type="submit" class="btn btn-accent w-full py-4 text-white font-bold text-lg rounded shadow-lg tracking-wide hover:-translate-y-1 transition-transform">申请成为合作伙伴</button>
@@ -251,7 +298,8 @@
     <footer class="bg-[#0b0b14] text-gray-400 py-6 text-center text-sm border-t border-gray-800">
         &copy; 2026 Hello Red Light B2B 制造厂.
     </footer>
-    
+
+    <script type="module" src="/src/main.js"></script>
     <script>
         const tabs = document.querySelectorAll('.tab-btn');
         const sections = document.querySelectorAll('.form-section');
