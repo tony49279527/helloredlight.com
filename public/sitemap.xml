@@ -3,109 +3,127 @@
   <!-- English Core Pages -->
   <url>
     <loc>https://helloredlight.com/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/products</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://helloredlight.com/oem-red-light-therapy</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://helloredlight.com/private-label-red-light-therapy</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://helloredlight.com/wholesale-red-light-panels</loc>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/product-detail</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/silicone-led-mask</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/luxor-360-bed</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/mini-panel-300w</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/laser-pen</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/therapy-belt</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/factory</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/technology</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/cases</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/certifications</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/partnerships</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/contact</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/resources</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/blog</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/buyers-guide</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/faq</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -113,31 +131,31 @@
   <!-- Blog Articles -->
   <url>
     <loc>https://helloredlight.com/blog/wavelength-comparison-guide</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/blog/red-light-therapy-benefits</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/blog/red-light-therapy-for-gyms</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/blog/red-light-therapy-for-skincare-clinics</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://helloredlight.com/blog/how-to-start-red-light-therapy-business</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -163,7 +181,6 @@
   </url>
 
   <!-- Chinese Core Pages -->
-  <!-- NOTE: /zh/ pages require the Chinese build to be deployed. -->
   <url>
     <loc>https://helloredlight.com/zh/</loc>
     <lastmod>2026-05-19</lastmod>
