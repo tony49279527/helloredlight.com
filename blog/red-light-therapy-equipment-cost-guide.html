@@ -46,7 +46,8 @@
     <meta property="twitter:image" content="https://helloredlight.com/images/og-cover.jpg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
-<body class="bg-gray-50">
+<body class="bg-brand-light">
+    <!-- Header -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
             <a href="/index.html" class="text-2xl font-bold tracking-tight text-brand-dark">
@@ -56,8 +57,15 @@
                 <a href="/products.html" class="text-gray-600 hover:text-brand-primary font-medium">Products</a>
                 <a href="/oem-red-light-therapy.html" class="text-gray-600 hover:text-brand-primary font-medium">OEM</a>
                 <a href="/wholesale-red-light-panels.html" class="text-gray-600 hover:text-brand-primary font-medium">Wholesale</a>
-                <a href="/blog/index.html" class="text-brand-primary font-medium border-b-2 border-brand-primary pb-1">Blog</a>
-                <a href="/contact.html" class="btn btn-primary text-sm px-4 py-2">Contact</a>
+                <a href="/factory.html" class="text-gray-600 hover:text-brand-primary font-medium">Factory</a>
+                <a href="/cases.html" class="text-gray-600 hover:text-brand-primary font-medium">Cases</a>
+                <a href="/certifications.html" class="text-gray-600 hover:text-brand-primary font-medium">Certifications</a>
+                <a href="/resources.html" class="text-gray-600 hover:text-brand-primary font-medium">Resources</a>
+                <a href="/contact.html" class="btn btn-primary text-sm px-4 py-2">Inquire Now</a>
+                <div class="border-l border-gray-300 pl-4">
+                    <span class="font-bold text-brand-primary">EN</span> | 
+                    <a href="/zh/index.html" class="text-gray-500 hover:text-brand-dark">ZH</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -283,37 +291,52 @@
     <footer class="bg-[#0b0b14] text-gray-400 py-12 border-t border-gray-800">
         <div class="container grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <a href="/index.html" class="text-2xl font-bold tracking-tight text-white mb-4 block">HELLO<span class="text-brand-primary">REDLIGHT</span></a>
+                <a href="/index.html" class="text-2xl font-bold tracking-tight text-white mb-4 block">
+                    HELLO<span class="text-brand-primary">REDLIGHT</span>
+                </a>
                 <p class="text-sm mb-4">Your premium B2B manufacturing partner for medical-grade Red Light Therapy equipment.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Services</h4>
+                <h4 class="text-white font-bold mb-4">Support Hub</h4>
                 <ul class="space-y-2 text-sm">
                     <li><a href="/oem-red-light-therapy.html" class="hover:text-white transition">OEM Manufacturing</a></li>
                     <li><a href="/private-label-red-light-therapy.html" class="hover:text-white transition">Private Label</a></li>
                     <li><a href="/wholesale-red-light-panels.html" class="hover:text-white transition">Wholesale Pricing</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Resources</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="/blog/index.html" class="hover:text-white transition">Blog</a></li>
                     <li><a href="/resources.html" class="hover:text-white transition">Documentation</a></li>
-                    <li><a href="/faq.html" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="/contact.html" class="hover:text-white transition">B2B Contacts</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Contact</h4>
+                <h4 class="text-white font-bold mb-4">Corporate Info</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="/contact.html" class="hover:text-white transition">Contact Us</a></li>
+                    <li><a href="/products.html" class="hover:text-white transition">Product Catalog</a></li>
+                    <li><a href="/factory.html" class="hover:text-white transition">Factory Strength</a></li>
+                    <li><a href="/certifications.html" class="hover:text-white transition">Certifications (FDA/CE)</a></li>
+                    <li><a href="/partnerships.html" class="hover:text-white transition">Dealership Status</a></li>
+                    <li><a href="/cases.html" class="hover:text-white transition">Success Cases</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Contact Info</h4>
+                <ul class="space-y-2 text-sm">
                     <li><a href="mailto:sales@helloredlight.com" class="hover:text-white transition">sales@helloredlight.com</a></li>
+                    <li><a href="tel:+8618309285711" class="hover:text-white transition">+86 183 0928 5711</a></li>
+                    <li>Headquarters: Room 1208, Building B3, Tian-An Energy Saving Technology Park, No. 555 Panyu Avenue North, Panyu District, Guangzhou, Guangdong, China</li>
                 </ul>
             </div>
         </div>
-        <div class="container mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-            <p>&copy; 2026 Hello Red Light B2B. All rights reserved.</p>
+        <div class="container text-center text-sm border-t border-gray-800 pt-8 mt-8">
+            &copy; <script>document.write(new Date().getFullYear())</script> Hello Red Light Manufacturing. All Rights Reserved. (B2B Division)
         </div>
     </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="/contact.html" class="flex-grow btn btn-primary text-sm py-3 shadow-lg uppercase tracking-wider">Inquire Now</a>
+        <a href="https://wa.me/8618309285711" class="btn btn-secondary px-4 py-3">WA</a>
+    </div>
+
+    <!-- Scripts -->
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
