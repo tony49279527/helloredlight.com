@@ -1,5 +1,7 @@
 {
   "google_psi_key": "AIzaSyB0aX1_negquoXHRv1ZiIfo7rseHuv7DKI",
-  "updated_at": "2026-05-19T21:00:00Z",
-  "note": "DO NOT hardcode API keys in scripts. Read from this file."
+  "google_gsc_service_account": "n8n-vertex-executor@my-project-75823-test.iam.gserviceaccount.com",
+  "google_gsc_scope": "https://www.googleapis.com/auth/webmasters",
+  "updated_at": "2026-05-24T16:00:00Z",
+  "note": "GSC API configured. Use full webmasters scope for read+write (sitemap submission, indexing requests)."
 }

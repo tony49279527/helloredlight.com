@@ -35,6 +35,7 @@ export default defineConfig({
         blogSkincare: resolve(__dirname, 'blog/red-light-therapy-for-skincare-clinics.html'),
         blogStartup: resolve(__dirname, 'blog/how-to-start-red-light-therapy-business.html'),
         blogWholesaleSupplier: resolve(__dirname, 'blog/how-to-choose-red-light-therapy-wholesale-supplier.html'),
+        blogCostGuide: resolve(__dirname, 'blog/red-light-therapy-equipment-cost-guide.html'),
         casesBeauty: resolve(__dirname, 'cases/beauty-salon-chain-deployment.html'),
         casesGym: resolve(__dirname, 'cases/gym-recovery-center.html'),
         casesDistributor: resolve(__dirname, 'cases/global-distributor-private-label.html'),
