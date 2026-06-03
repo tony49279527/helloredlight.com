@@ -18,6 +18,5 @@ ENV PORT 8080
 EXPOSE $PORT
 
 # Cloud Run injects $PORT automatically. Configure nginx to listen on $PORT
-RUN sed -i -e "s/listen       80;/listen       ${PORT};/g" /etc/nginx/conf.d/default.conf
 
 CMD ["nginx", "-g", "daemon off;"]
