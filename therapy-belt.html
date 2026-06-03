@@ -46,7 +46,18 @@
     <meta property="twitter:description" content="Wearable red light therapy belt for sports recovery, physiotherapy programs, and retail wellness bundles." />
     <meta property="twitter:image" content="https://helloredlight.com/images/belt_smart.webp" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-</head>
+
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "manufacturedIn": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Guangzhou", "addressRegion": "Guangdong", "addressCountry": "CN" } }
+    }
+    </script>
+    </head>
 <body class="bg-brand-light">
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
@@ -77,7 +88,7 @@
             <div class="flex flex-col lg:flex-row gap-12 mb-16">
                 <div class="w-full lg:w-1/2">
                     <div class="bg-gray-100 w-full aspect-square rounded-xl flex items-center justify-center overflow-hidden border">
-                        <img src="/images/belt_smart.webp" alt="Pain Relief Therapy Belt" width="1024" height="1024" class="w-full h-full object-contain bg-white"  loading="lazy" />
+                        <img fetchpriority="high" src="/images/belt_smart.webp" alt="Pain Relief Therapy Belt" width="1024" height="1024" class="w-full h-full object-contain bg-white"  loading="lazy" />
                     </div>
                 </div>
 
@@ -227,5 +238,40 @@
         </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" style="position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:16px 24px;z-index:9999;display:none;font-size:14px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+    <span>This site uses cookies to improve your experience and analyze site traffic. By continuing, you agree to our <a href="/privacy" style="color:#6ee7b7;text-decoration:underline;">Privacy Policy</a> and <a href="/cookies" style="color:#6ee7b7;text-decoration:underline;">Cookies Policy</a>.</span>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button onclick="acceptCookies()" style="padding:8px 24px;background:#10b981;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:13px;">Accept</button>
+      <button onclick="declineCookies()" style="padding:8px 24px;background:transparent;color:#ccc;border:1px solid #555;border-radius:6px;cursor:pointer;font-size:13px;">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
+}
+function setCookie(name, value) {
+  document.cookie = name + '=' + value + ';path=/;max-age=' + (365*24*60*60);
+}
+function acceptCookies() {
+  setCookie('cookie_consent', 'accepted');
+  document.getElementById('cookie-consent').style.display = 'none';
+}
+function declineCookies() {
+  setCookie('cookie_consent', 'declined');
+  document.getElementById('cookie-consent').style.display = 'none';
+}
+(function() {
+  const consent = getCookie('cookie_consent');
+  if (!consent) {
+    document.getElementById('cookie-consent').style.display = 'block';
+  }
+})();
+</script>
+
 </body>
 </html>
