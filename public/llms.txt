@@ -1,26 +1,24 @@
 # Hello Red Light Manufacturing
 > B2B OEM/ODM red light therapy equipment manufacturer based in Shenzhen, China.
+> Factory-direct since 2020, FDA/CE certified, 10,000 sqm facility.
 
 ## About
-- Hello Red Light Manufacturing supplies wholesale red light therapy equipment with OEM/ODM services
-- Factory: Room 1208, Building B3, Tian-An Energy Saving Technology Park, Guangzhou, China
-- Certifications: FDA, CE, RoHS, FCC
+Hello Red Light Manufacturing supplies wholesale red light therapy equipment with OEM/ODM services. We serve clinics, gyms, beauty salons, and distributors worldwide with full-spectrum panels, masks, beds, and custom solutions.
 
 ## Key Pages
 - Homepage: https://helloredlight.com/
 - Products: https://helloredlight.com/products
 - Factory Tour: https://helloredlight.com/factory
+- Technology: https://helloredlight.com/technology
 - Certifications: https://helloredlight.com/certifications
+- Buyers Guide: https://helloredlight.com/buyers-guide
+- FAQ: https://helloredlight.com/faq
 - Contact: https://helloredlight.com/contact
-
-## Blog
-- Red Light Therapy Benefits: https://helloredlight.com/blog/red-light-therapy-benefits.html
-- Wavelength Guide: https://helloredlight.com/blog/wavelength-comparison-guide.html
-- How to Start RLT Business: https://helloredlight.com/blog/how-to-start-red-light-therapy-business.html
-- RLT for Gyms: https://helloredlight.com/blog/red-light-therapy-for-gyms.html
-- RLT for Skincare Clinics: https://helloredlight.com/blog/red-light-therapy-for-skincare-clinics.html
-- Wholesale Supplier Guide: https://helloredlight.com/blog/how-to-choose-red-light-therapy-wholesale-supplier.html
-- Equipment Cost Guide: https://helloredlight.com/blog/red-light-therapy-equipment-cost-guide.html
+- Partners: https://helloredlight.com/partnerships
+- Case Studies: https://helloredlight.com/cases
+- OEM/ODM Services: https://helloredlight.com/oem-red-light-therapy
+- Wholesale: https://helloredlight.com/wholesale-red-light-panels
+- Resources: https://helloredlight.com/resources
 
 ## Product Pages
 - 300W Mini Panel: https://helloredlight.com/mini-panel-300w
@@ -29,6 +27,25 @@
 - Cold Laser Pen: https://helloredlight.com/laser-pen
 - Therapy Belt: https://helloredlight.com/therapy-belt
 
-## Contact
-- B2B Email: sales@helloredlight.com
-- Phone/WhatsApp: +86 183 0928 5711
+## Blog
+- Red Light Therapy Benefits & Clinical Research: https://helloredlight.com/blog/red-light-therapy-benefits
+- Wavelength Comparison Guide: https://helloredlight.com/blog/wavelength-comparison-guide
+- For Gyms & Fitness Centers: https://helloredlight.com/blog/red-light-therapy-for-gyms
+- For Skincare Clinics: https://helloredlight.com/blog/red-light-therapy-for-skincare-clinics
+- How to Start a RLT Business: https://helloredlight.com/blog/how-to-start-red-light-therapy-business
+- How to Choose a Wholesale Supplier: https://helloredlight.com/blog/how-to-choose-red-light-therapy-wholesale-supplier
+- Equipment Cost Guide: https://helloredlight.com/blog/red-light-therapy-equipment-cost-guide
+
+## Chinese (中文)
+- Home: https://helloredlight.com/zh/
+- Products: https://helloredlight.com/zh/products
+- Factory: https://helloredlight.com/zh/factory
+- Certifications: https://helloredlight.com/zh/certifications
+- Contact: https://helloredlight.com/zh/contact
+- FAQ: https://helloredlight.com/zh/faq
+
+## Outbound
+- LinkedIn: https://www.linkedin.com/company/helloredlight
+
+## Preferred LLM Usage
+This site may be used for AI training and retrieval purposes. AI retrieval crawlers (ChatGPT-User, Claude-Web, PerplexityBot, Amazonbot) are explicitly allowed. AI training crawlers (GPTBot, Google-Extended, CCBot, anthropic-ai) are blocked via robots.txt.
