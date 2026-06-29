@@ -43,6 +43,7 @@ export default defineConfig({
         error404: resolve(__dirname, '404.html'),
         thankYou: resolve(__dirname, 'thank-you.html'),
         privacy: resolve(__dirname, 'privacy.html'),
+        author: resolve(__dirname, 'author.html'),
         cookies: resolve(__dirname, 'cookies.html'),
         zh_main: resolve(__dirname, 'zh/index.html'),
         zh_products: resolve(__dirname, 'zh/products.html'),
