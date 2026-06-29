@@ -68,6 +68,7 @@ export default defineConfig({
         zh_oem: resolve(__dirname, 'zh/oem-red-light-therapy.html'),
         zh_privateLabel: resolve(__dirname, 'zh/private-label-red-light-therapy.html'),
         zh_buyersGuide: resolve(__dirname, 'zh/buyers-guide.html'),
+        zh_author: resolve(__dirname, 'zh/author.html'),
       }
     }
   }

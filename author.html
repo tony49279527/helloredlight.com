@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://helloredlight.com/author" />
     <link rel="alternate" hreflang="en" href="https://helloredlight.com/author" />
+    <link rel="alternate" hreflang="zh-CN" href="https://helloredlight.com/zh/author" />
     <link rel="alternate" hreflang="x-default" href="https://helloredlight.com/author" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,12 +17,20 @@
     {
       "@context": "https://schema.org",
       "@type": "ProfilePage",
+      "url": "https://helloredlight.com/author",
       "mainEntity": {
-        "@type": "Person",
+        "@type": "Organization",
+        "@id": "https://helloredlight.com/author#team",
         "name": "Hello Red Light Product Team",
-        "jobTitle": "RLT Product Specialists",
-        "worksFor": { "@id": "https://helloredlight.com/#organization" },
-        "description": "RLT product specialists with over 10 years of experience in photobiomodulation device manufacturing, OEM engineering, and clinical application research. The team includes optical engineers, clinical consultants, and B2B product managers who collectively serve 200+ global enterprise clients."
+        "url": "https://helloredlight.com/author",
+        "parentOrganization": { "@id": "https://helloredlight.com/#organization" },
+        "description": "The cross-functional editorial and product team responsible for Hello Red Light's manufacturing, sourcing, and photobiomodulation equipment content.",
+        "knowsAbout": [
+          "Photobiomodulation equipment",
+          "LED optical engineering",
+          "OEM and private-label manufacturing",
+          "B2B product sourcing"
+        ]
       }
     }
     </script>
@@ -49,10 +58,10 @@
 
             <section class="mb-8">
                 <p class="text-gray-400 leading-relaxed text-lg mb-6">
-                    We are the Hello Red Light Product Team — a multidisciplinary group of optical engineers, clinical consultants, and B2B product managers who have been building red light therapy equipment for over a decade. With more than 200 global enterprise clients served, our collective expertise spans the full lifecycle of photobiomodulation devices: from LED chip selection and driver circuit design to clinical validation protocol development and international regulatory compliance.
+                    We are the Hello Red Light Product Team — a cross-functional group working across optical engineering, manufacturing, quality control, regulatory documentation, and B2B product management. Our work spans the product lifecycle from LED selection and driver design to production validation and international sourcing support.
                 </p>
                 <p class="text-gray-400 leading-relaxed text-lg">
-                    Every article, buyer's guide, and technical specification published on this site reflects hands-on factory experience — not marketing theory. When we write about wavelength selection, irradiance measurement, or OEM timelines, we are describing processes we execute daily.
+                    Every article, buyer's guide, and technical specification is reviewed against our current production practices and the cited source material. Commercial pages describe products and services supplied by Hello Red Light; educational articles are written to separate published evidence from manufacturer observations.
                 </p>
             </section>
 
@@ -85,6 +94,16 @@
                 </p>
             </section>
 
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-white mb-4">Editorial and Review Standards</h2>
+                <ul class="list-disc pl-6 text-gray-400 leading-relaxed space-y-3">
+                    <li>Health and performance claims must be supported by a directly linked source or clearly labeled as a manufacturer observation.</li>
+                    <li>Regulatory status is model- and market-specific. Buyers should verify current documentation for the exact SKU and destination country.</li>
+                    <li>Commercial relationships and first-party data are disclosed where they materially affect an article's conclusions.</li>
+                    <li>Corrections can be requested at <a href="mailto:sales@helloredlight.com" class="text-brand-primary underline">sales@helloredlight.com</a>.</li>
+                </ul>
+            </section>
+
             <div class="text-center mt-10">
                 <a href="/contact" class="btn btn-primary px-10 py-4 shadow-lg text-lg">Contact Our Team</a>
             </div>
@@ -94,5 +113,6 @@
     <footer class="text-center py-6 text-gray-600 text-sm">
         &copy; 2026 Hello Red Light Manufacturing
     </footer>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>

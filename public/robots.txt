@@ -1,7 +1,27 @@
 User-agent: *
 Allow: /
 
-# AI Training Crawlers — Blocked
+# AI search crawlers — Allowed
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# User-triggered fetchers — Allowed
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# AI training crawlers — Blocked
 User-agent: GPTBot
 Disallow: /
 
@@ -19,22 +39,6 @@ Disallow: /
 
 User-agent: Applebot-Extended
 Disallow: /
-
-# AI Retrieval Crawlers — Allowed (for AI search visibility)
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: YouBot
-Allow: /
 
 # Default rules
 Sitemap: https://helloredlight.com/sitemap.xml
