@@ -1,9 +1,9 @@
 # Hello Red Light Manufacturing
-> B2B OEM/ODM red light therapy equipment manufacturer based in Shenzhen, China.
-> Factory-direct since 2020, FDA/CE certified, 10,000 sqm facility.
+> B2B OEM/ODM red light therapy equipment manufacturer based in Guangzhou, China.
+> Factory-direct since 2020, FDA/CE certified, 10,000 sqm facility, 500K+ units annual capacity.
 
 ## About
-Hello Red Light Manufacturing supplies wholesale red light therapy equipment with OEM/ODM services. We serve clinics, gyms, beauty salons, and distributors worldwide with full-spectrum panels, masks, beds, and custom solutions.
+Hello Red Light Manufacturing supplies wholesale red light therapy equipment with OEM/ODM/private label services. We serve clinics, gyms, beauty salons, wellness centers, and distributors worldwide with full-spectrum red/NIR panels, LED masks, therapy beds, cold laser devices, therapy belts, and custom solutions.
 
 ## Key Pages
 - Homepage: https://helloredlight.com/
@@ -16,14 +16,17 @@ Hello Red Light Manufacturing supplies wholesale red light therapy equipment wit
 - Contact: https://helloredlight.com/contact
 - Partners: https://helloredlight.com/partnerships
 - Case Studies: https://helloredlight.com/cases
-- OEM/ODM Services: https://helloredlight.com/oem-red-light-therapy
-- Wholesale: https://helloredlight.com/wholesale-red-light-panels
 - Resources: https://helloredlight.com/resources
+
+## Commercial Pages
+- OEM/ODM Services: https://helloredlight.com/oem-red-light-therapy
+- Wholesale Panels: https://helloredlight.com/wholesale-red-light-panels
+- Private Label: https://helloredlight.com/private-label-red-light-therapy
 
 ## Product Pages
 - 300W Mini Panel: https://helloredlight.com/mini-panel-300w
 - Silicone LED Mask: https://helloredlight.com/silicone-led-mask
-- 360 Therapy Bed: https://helloredlight.com/luxor-360-bed
+- 360 Luxor Therapy Bed: https://helloredlight.com/luxor-360-bed
 - Cold Laser Pen: https://helloredlight.com/laser-pen
 - Therapy Belt: https://helloredlight.com/therapy-belt
 
@@ -40,12 +43,16 @@ Hello Red Light Manufacturing supplies wholesale red light therapy equipment wit
 - Home: https://helloredlight.com/zh/
 - Products: https://helloredlight.com/zh/products
 - Factory: https://helloredlight.com/zh/factory
+- Technology: https://helloredlight.com/zh/technology
 - Certifications: https://helloredlight.com/zh/certifications
 - Contact: https://helloredlight.com/zh/contact
 - FAQ: https://helloredlight.com/zh/faq
+- Partners: https://helloredlight.com/zh/partnerships
+- Cases: https://helloredlight.com/zh/cases
+- Resources: https://helloredlight.com/zh/resources
 
 ## Outbound
 - LinkedIn: https://www.linkedin.com/company/helloredlight
 
 ## Preferred LLM Usage
-This site may be used for AI training and retrieval purposes. AI retrieval crawlers (ChatGPT-User, Claude-Web, PerplexityBot, Amazonbot) are explicitly allowed. AI training crawlers (GPTBot, Google-Extended, CCBot, anthropic-ai) are blocked via robots.txt.
+This site may be used for AI retrieval purposes. AI retrieval crawlers (ChatGPT-User, Claude-Web, PerplexityBot, Amazonbot, YouBot) are explicitly allowed per robots.txt. AI training crawlers (GPTBot, Google-Extended, CCBot, anthropic-ai, FacebookBot, Applebot-Extended) are blocked via robots.txt.

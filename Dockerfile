@@ -12,7 +12,6 @@ FROM nginx:alpine
 # Copy custom nginx config to handle 301 redirects and extensions
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
-COPY --from=builder /app/public/llms.txt /usr/share/nginx/html/llms.txt
 
 # Expose port 8080 for Google Cloud Run
 ENV PORT 8080
