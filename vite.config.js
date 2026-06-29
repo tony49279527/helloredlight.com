@@ -45,6 +45,7 @@ export default defineConfig({
         privacy: resolve(__dirname, 'privacy.html'),
         author: resolve(__dirname, 'author.html'),
         cookies: resolve(__dirname, 'cookies.html'),
+        about: resolve(__dirname, 'about.html'),
         zh_main: resolve(__dirname, 'zh/index.html'),
         zh_products: resolve(__dirname, 'zh/products.html'),
         zh_factory: resolve(__dirname, 'zh/factory.html'),
@@ -63,6 +64,10 @@ export default defineConfig({
         zh_laserPen: resolve(__dirname, 'zh/laser-pen.html'),
         zh_therapyBelt: resolve(__dirname, 'zh/therapy-belt.html'),
         zh_thankYou: resolve(__dirname, 'zh/thank-you.html'),
+        zh_wholesale: resolve(__dirname, 'zh/wholesale-red-light-panels.html'),
+        zh_oem: resolve(__dirname, 'zh/oem-red-light-therapy.html'),
+        zh_privateLabel: resolve(__dirname, 'zh/private-label-red-light-therapy.html'),
+        zh_buyersGuide: resolve(__dirname, 'zh/buyers-guide.html'),
       }
     }
   }
