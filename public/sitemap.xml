@@ -21,8 +21,6 @@
   <url><loc>https://helloredlight.com/faq</loc><lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://helloredlight.com/buyers-guide</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://helloredlight.com/resources</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://helloredlight.com/thank-you</loc><lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://helloredlight.com/404</loc><lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
   <!-- Blog -->
   <url><loc>https://helloredlight.com/blog/</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://helloredlight.com/blog/red-light-therapy-market-size-2026</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -45,6 +43,7 @@
   <url><loc>https://helloredlight.com/zh/silicone-led-mask</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://helloredlight.com/zh/luxor-360-bed</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://helloredlight.com/zh/laser-pen</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://helloredlight.com/zh/therapy-belt</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://helloredlight.com/zh/factory</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://helloredlight.com/zh/technology</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://helloredlight.com/zh/certifications</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -53,5 +52,4 @@
   <url><loc>https://helloredlight.com/zh/contact</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://helloredlight.com/zh/faq</loc><lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://helloredlight.com/zh/resources</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://helloredlight.com/zh/thank-you</loc><lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

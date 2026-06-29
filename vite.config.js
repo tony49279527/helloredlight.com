@@ -42,6 +42,8 @@ export default defineConfig({
         casesDistributor: resolve(__dirname, 'cases/global-distributor-private-label.html'),
         error404: resolve(__dirname, '404.html'),
         thankYou: resolve(__dirname, 'thank-you.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
+        cookies: resolve(__dirname, 'cookies.html'),
         zh_main: resolve(__dirname, 'zh/index.html'),
         zh_products: resolve(__dirname, 'zh/products.html'),
         zh_factory: resolve(__dirname, 'zh/factory.html'),
