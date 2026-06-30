@@ -1,0 +1,61 @@
+query_id,locale,family,intent,variant_id,query,expected_landing_page,priority
+PANEL-01,en-US,panel,discovery,v1,best commercial red light therapy panel manufacturer,/products,high
+PANEL-02,en-US,panel,comparison,v1,1500W vs 300W red light therapy panel for a clinic,/product-detail,high
+PANEL-03,en-US,panel,purchase,v1,wholesale full body red light therapy panels with low MOQ,/wholesale-red-light-panels,high
+PANEL-04,en-GB,panel,regional,v1,red light therapy panel supplier for UK wellness clinics,/products,medium
+PANEL-05,en-US,panel,application,v1,which red light panel is suitable for gym recovery zones,/blog/red-light-therapy-for-gyms,high
+PANEL-06,en-US,panel,faq,v1,what wavelength mix should a commercial red light panel use,/blog/wavelength-comparison-guide,medium
+PANEL-07,en-US,panel,compliance,v1,how to verify FDA and electrical documents for red light panels,/certifications,high
+PANEL-08,en-US,panel,purchase,v2,bulk 660nm 850nm LED therapy panel OEM quote,/oem-red-light-therapy,high
+PANEL-09,en-AU,panel,regional,v1,commercial red light panel supplier for Australian gyms,/products,medium
+PANEL-10,en-US,panel,comparison,v2,red light panel irradiance comparison at six inches,/product-detail,medium
+PANEL-11,zh-CN,panel,purchase,v1,商用红光理疗板批发厂家低起订量,/zh/wholesale-red-light-panels,high
+PANEL-12,zh-CN,panel,comparison,v1,1500W和300W红光理疗板怎么选,/zh/products,high
+BED-01,en-US,bed,discovery,v1,commercial red light therapy bed manufacturer,/luxor-360-bed,high
+BED-02,en-US,bed,purchase,v1,wholesale full body red light therapy bed price,/luxor-360-bed,high
+BED-03,en-US,bed,application,v1,red light therapy bed for luxury spa treatment room,/luxor-360-bed,medium
+BED-04,en-AE,bed,regional,v1,red light therapy bed supplier for UAE wellness center,/luxor-360-bed,medium
+BED-05,en-US,bed,comparison,v1,red light therapy bed vs full body panel for a spa,/luxor-360-bed,high
+BED-06,en-US,bed,faq,v1,what should buyers check before importing a red light therapy bed,/buyers-guide,high
+BED-07,en-US,bed,logistics,v1,red light therapy bed packaging and shipping requirements,/resources,medium
+BED-08,en-US,bed,compliance,v1,documents required for a commercial red light therapy bed,/certifications,high
+BED-09,zh-CN,bed,purchase,v1,全身红光理疗床厂家和项目报价,/zh/luxor-360-bed,high
+BED-10,zh-CN,bed,logistics,v1,红光理疗床出口包装和运输需要哪些参数,/zh/resources,medium
+MASK-01,en-US,mask,discovery,v1,private label silicone LED face mask manufacturer,/silicone-led-mask,high
+MASK-02,en-US,mask,purchase,v1,wholesale flexible LED face masks with custom packaging,/silicone-led-mask,high
+MASK-03,en-GB,mask,regional,v1,LED face mask OEM supplier for UK skincare brands,/silicone-led-mask,medium
+MASK-04,en-US,mask,comparison,v1,silicone LED mask vs rigid LED mask for private label,/silicone-led-mask,medium
+MASK-05,en-US,mask,application,v1,LED face mask supplier for skincare clinic retail programs,/blog/red-light-therapy-for-skincare-clinics,high
+MASK-06,en-US,mask,faq,v1,what is the MOQ for a private label LED face mask,/silicone-led-mask,high
+MASK-07,en-US,mask,compliance,v1,how to verify LED face mask compliance documents,/certifications,high
+MASK-08,en-US,mask,purchase,v2,custom logo 660nm 850nm LED mask bulk order,/private-label-red-light-therapy,high
+MASK-09,zh-CN,mask,purchase,v1,硅胶LED美容面罩贴牌代工厂家,/zh/silicone-led-mask,high
+MASK-10,zh-CN,mask,faq,v1,LED美容面罩定制起订量和交期,/zh/silicone-led-mask,high
+PORT-01,en-US,portable,discovery,v1,portable red light therapy device wholesale supplier,/products,medium
+PORT-02,en-US,portable,purchase,v1,cold laser therapy pen bulk order manufacturer,/laser-pen,high
+PORT-03,en-US,portable,application,v1,red light therapy belt for sports recovery retail kits,/therapy-belt,medium
+PORT-04,en-US,portable,comparison,v1,cold laser pen vs LED therapy belt for targeted treatment,/products,medium
+PORT-05,en-US,portable,faq,v1,MOQ and warranty for wholesale red light therapy belts,/therapy-belt,high
+PORT-06,en-US,portable,compliance,v1,documents to request for a cold laser therapy pen,/certifications,high
+PORT-07,zh-CN,portable,purchase,v1,冷激光理疗笔批发和贴牌厂家,/zh/laser-pen,high
+PORT-08,zh-CN,portable,purchase,v1,红光理疗腰带批发定制低起订量,/zh/therapy-belt,high
+OEM-01,en-US,oem,discovery,v1,red light therapy OEM manufacturer in China,/oem-red-light-therapy,high
+OEM-02,en-US,oem,purchase,v1,private label red light therapy equipment manufacturer,/private-label-red-light-therapy,high
+OEM-03,en-US,oem,comparison,v1,how to compare red light therapy wholesale suppliers,/blog/how-to-choose-red-light-therapy-wholesale-supplier,high
+OEM-04,en-US,oem,faq,v1,what information is needed for a red light therapy OEM quote,/resources,high
+OEM-05,en-US,oem,purchase,v2,low MOQ red light therapy private label program,/private-label-red-light-therapy,high
+OEM-06,en-DE,oem,regional,v1,red light therapy OEM supplier for EU distributors,/oem-red-light-therapy,medium
+OEM-07,en-US,oem,compliance,v1,how to map supplier certificates to an exact medical device SKU,/certifications,high
+OEM-08,en-US,oem,logistics,v1,red light therapy equipment EXW vs FOB procurement,/resources,medium
+OEM-09,en-US,oem,application,v1,how to start a red light therapy equipment brand,/blog/how-to-start-red-light-therapy-business,high
+OEM-10,en-US,oem,comparison,v2,red light therapy factory sample process and bulk lead time,/resources,high
+OEM-11,zh-CN,oem,purchase,v1,红光理疗设备OEM贴牌代工厂家,/zh/oem-red-light-therapy,high
+OEM-12,zh-CN,oem,faq,v1,红光理疗设备定制打样到量产流程,/zh/resources,high
+BRAND-01,en-US,brand,brand,v1,Hello Red Light manufacturer product range,/products,high
+BRAND-02,en-US,brand,brand,v2,Hello Red Light compliance documents,/certifications,high
+BRAND-03,en-US,brand,brand,v3,Hello Red Light factory contact and quotation,/contact,high
+BRAND-04,en-US,brand,brand,v4,Hello Red Light product specification sheets,/resources,high
+REGION-01,en-US,regional,regional,v1,red light therapy equipment supplier for US distributors,/wholesale-red-light-panels,medium
+REGION-02,en-DE,regional,regional,v1,red light therapy manufacturer for EU private label brands,/private-label-red-light-therapy,medium
+REGION-03,en-AE,regional,regional,v1,commercial red light therapy supplier for Middle East spas,/products,medium
+REGION-04,zh-CN,brand,brand,v1,Hello Red Light红光理疗设备产品和联系方式,/zh/products,high

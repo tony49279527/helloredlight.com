@@ -3,9 +3,23 @@ import path from 'node:path';
 
 const root = process.cwd();
 const siteOrigin = 'https://helloredlight.com';
-const ignoredDirectories = new Set(['.git', 'dist', 'node_modules']);
+const ignoredDirectories = new Set(['.git', 'dist', 'node_modules', 'output', 'tmp']);
 const errors = [];
 const warnings = [];
+const productFiles = new Set([
+  'product-detail.html',
+  'mini-panel-300w.html',
+  'luxor-360-bed.html',
+  'silicone-led-mask.html',
+  'laser-pen.html',
+  'therapy-belt.html',
+  'zh/product-detail.html',
+  'zh/mini-panel-300w.html',
+  'zh/luxor-360-bed.html',
+  'zh/silicone-led-mask.html',
+  'zh/laser-pen.html',
+  'zh/therapy-belt.html',
+]);
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -35,6 +49,21 @@ function addError(file, message) {
 
 function addWarning(file, message) {
   warnings.push(`${file}: ${message}`);
+}
+
+function normalizeSiteUrl(value, base = `${siteOrigin}/`) {
+  try {
+    const url = new URL(value, base);
+    if (url.origin !== siteOrigin) return '';
+    url.hash = '';
+    url.search = '';
+    if (url.pathname !== '/' && url.pathname.endsWith('/')) {
+      url.pathname = url.pathname.slice(0, -1);
+    }
+    return url.href;
+  } catch {
+    return '';
+  }
 }
 
 function routeCandidates(sourceFile, href) {
@@ -86,6 +115,16 @@ for (const absolute of htmlFiles) {
     content,
     /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
   );
+  const alternates = matches(content, /<link\b[^>]*rel=["']alternate["'][^>]*>/gi)
+    .map((match) => {
+      const tag = match[0];
+      return {
+        lang: firstCapture(tag, /\bhreflang=["']([^"']+)["']/i),
+        href: normalizeSiteUrl(firstCapture(tag, /\bhref=["']([^"']+)["']/i)),
+      };
+    })
+    .filter((alternate) => alternate.lang && alternate.href);
+  const internalLinks = [];
 
   if (!title) addError(file, 'missing <title>');
   if (!description) addError(file, 'missing meta description');
@@ -131,6 +170,8 @@ for (const absolute of htmlFiles) {
 
   for (const anchor of matches(content, /<a\b[^>]*href=["']([^"']+)["'][^>]*>/gi)) {
     const href = anchor[1];
+    const normalized = normalizeSiteUrl(href, canonical || `${siteOrigin}/`);
+    if (normalized) internalLinks.push(normalized);
     if (
       !href ||
       href.startsWith('#') ||
@@ -149,8 +190,67 @@ for (const absolute of htmlFiles) {
   if (/3012XXXX|All products are FDA cleared|所有产品均通过FDA/.test(content)) {
     addError(file, 'contains placeholder or blanket regulatory claim');
   }
+  if (
+    !noindex &&
+    /Mark Johnson|Sarah Chen|Dr\.\s*Robert Webb|Sophie Claire|Legend Fitness Chain|Lumina Skincare Group/i.test(
+      content,
+    )
+  ) {
+    addError(file, 'indexable page contains an unverified testimonial or customer identity');
+  }
 
-  pages.push({ file, noindex, title, description, canonical });
+  if (productFiles.has(file)) {
+    const requiredSignals = [
+      ['SKU', /\bSKU\b/i],
+      ['MOQ', /\bMOQ\b|最小订单量|最小起订量/i],
+      ['lead time', /Lead Time|交期|交货期/i],
+      ['shipping', /Shipping Port|Shipping Method|发货港|运输方式/i],
+      ['payment terms', /Payment Terms|付款方式/i],
+      ['warranty', /Warranty|保修|质保/i],
+      ['customization', /Customization|定制能力|定制/i],
+      ['packaging', /Packaging|Packout|包装/i],
+      ['compliance verification', /Compliance|Certification|合规|认证/i],
+    ];
+    for (const [label, expression] of requiredSignals) {
+      if (!expression.test(content)) addError(file, `product page is missing ${label}`);
+    }
+    if (!/"@type"\s*:\s*"Product"/i.test(content)) {
+      addError(file, 'product page is missing Product JSON-LD');
+    }
+    if (!/href=["'][^"']+\.pdf["'][^>]*\bdownload\b/i.test(content)) {
+      addError(file, 'product page has no direct downloadable technical PDF');
+    }
+    if (!/href=["'][^"']*\/(?:zh\/)?contact(?:[?"'])/i.test(content)) {
+      addError(file, 'product page has no quotation/contact CTA');
+    }
+  }
+
+  if (/^(?:blog|cases)\//.test(file)) {
+    const hasCommercialLink = internalLinks.some((href) =>
+      /\/(?:products|product-detail|mini-panel-300w|luxor-360-bed|silicone-led-mask|laser-pen|therapy-belt|contact)$/.test(
+        new URL(href).pathname,
+      ),
+    );
+    if (!hasCommercialLink) {
+      addWarning(file, 'editorial/case page has no direct link to a product, catalog, or contact page');
+    }
+  }
+
+  if (file === 'contact.html' || file === 'zh/contact.html') {
+    const primaryForm = content.match(/<form\b[\s\S]*?<\/form>/i)?.[0] ?? '';
+    const requiredFields = matches(
+      primaryForm,
+      /<(?:input|select|textarea)\b[^>]*\brequired\b[^>]*>/gi,
+    ).length;
+    if (requiredFields > 8) {
+      addWarning(
+        file,
+        `primary inquiry form has ${requiredFields} required fields (target: 8 or fewer)`,
+      );
+    }
+  }
+
+  pages.push({ file, noindex, title, description, canonical, lang, alternates, internalLinks });
 }
 
 for (const [field, label] of [
@@ -200,6 +300,116 @@ for (const page of pages.filter((item) => !item.noindex && item.canonical)) {
   }
 }
 
+const pageByCanonical = new Map(
+  pages
+    .filter((page) => page.canonical)
+    .map((page) => [normalizeSiteUrl(page.canonical), page]),
+);
+
+for (const page of pages.filter((item) => !item.noindex && item.canonical)) {
+  for (const alternate of page.alternates.filter((item) => item.lang !== 'x-default')) {
+    const target = pageByCanonical.get(alternate.href);
+    if (!target) {
+      addError(page.file, `hreflang target does not map to a local canonical: ${alternate.href}`);
+      continue;
+    }
+    const reciprocal = target.alternates.some(
+      (item) => item.lang !== 'x-default' && item.href === normalizeSiteUrl(page.canonical),
+    );
+    if (!reciprocal) {
+      addError(page.file, `hreflang is not reciprocal with ${target.file}`);
+    }
+  }
+}
+
+const incomingLinks = new Map(
+  pages
+    .filter((page) => !page.noindex && page.canonical)
+    .map((page) => [normalizeSiteUrl(page.canonical), new Set()]),
+);
+for (const source of pages.filter((page) => !page.noindex && page.canonical)) {
+  for (const href of source.internalLinks) {
+    if (href !== normalizeSiteUrl(source.canonical) && incomingLinks.has(href)) {
+      incomingLinks.get(href).add(source.file);
+    }
+  }
+}
+for (const page of pages.filter((item) => !item.noindex && item.canonical)) {
+  const canonicalUrl = normalizeSiteUrl(page.canonical);
+  if (canonicalUrl !== `${siteOrigin}/` && incomingLinks.get(canonicalUrl)?.size === 0) {
+    addWarning(page.file, 'indexable page has no internal incoming link');
+  }
+}
+
+const downloadableProductPages = pages.filter(
+  (page) =>
+    productFiles.has(page.file) &&
+    page.internalLinks.some((href) => new URL(href).pathname.endsWith('.pdf')),
+).length;
+const technicalAssetCoverage = Math.round((downloadableProductPages / productFiles.size) * 100);
+if (technicalAssetCoverage < 60) {
+  errors.push(
+    `product technical-asset coverage is ${technicalAssetCoverage}% (target: at least 60%)`,
+  );
+}
+
+const querySetPath = path.join(root, 'data', 'geo-query-set.csv');
+const queryLines = fs
+  .readFileSync(querySetPath, 'utf8')
+  .trim()
+  .split(/\r?\n/)
+  .slice(1);
+const queryRows = queryLines.map((line) => {
+  const [queryId, locale, family, intent, variantId, query, landingPage, priority] =
+    line.split(',');
+  return { queryId, locale, family, intent, variantId, query, landingPage, priority };
+});
+if (queryRows.length < 60) {
+  errors.push(`data/geo-query-set.csv: expected at least 60 baseline queries, found ${queryRows.length}`);
+}
+const queryIds = new Set(queryRows.map((row) => row.queryId));
+if (queryIds.size !== queryRows.length) {
+  errors.push('data/geo-query-set.csv: query_id values must be unique');
+}
+for (const row of queryRows) {
+  if (Object.values(row).some((value) => !value)) {
+    errors.push(`data/geo-query-set.csv: incomplete row ${row.queryId || '(missing ID)'}`);
+  }
+  if (!localTargetExists('index.html', row.landingPage)) {
+    errors.push(`data/geo-query-set.csv: ${row.queryId} has invalid landing page ${row.landingPage}`);
+  }
+}
+for (const [family, minimum] of [
+  ['panel', 10],
+  ['bed', 10],
+  ['mask', 10],
+  ['oem', 10],
+]) {
+  const count = queryRows.filter((row) => row.family === family).length;
+  if (count < minimum) {
+    errors.push(`data/geo-query-set.csv: ${family} family has ${count} queries (target: ${minimum}+)`);
+  }
+}
+
+const observationHeader = fs
+  .readFileSync(path.join(root, 'data', 'geo-observation-log.csv'), 'utf8')
+  .split(/\r?\n/, 1)[0];
+if (!observationHeader.includes('observed_at_utc') || !observationHeader.includes('citation_present')) {
+  errors.push('data/geo-observation-log.csv: required evidence-log fields are missing');
+}
+
+const claimRegister = fs.readFileSync(
+  path.join(root, 'data', 'claim-evidence-register.csv'),
+  'utf8',
+);
+if (
+  !claimRegister.includes('evidence_status') ||
+  !claimRegister.includes('owner_evidence_required') ||
+  !claimRegister.includes('quarantined_unverified')
+) {
+  errors.push('data/claim-evidence-register.csv: claim status controls are incomplete');
+}
+
 const robots = fs.readFileSync(path.join(root, 'public', 'robots.txt'), 'utf8');
 if (!/User-agent:\s*OAI-SearchBot[\s\S]*?Allow:\s*\//i.test(robots)) {
   errors.push('public/robots.txt: OAI-SearchBot is not explicitly allowed');
@@ -214,6 +424,10 @@ if (!llms.includes('OAI-SearchBot')) {
 }
 
 console.log(`SEO audit scanned ${pages.length} HTML files and ${sitemapUrls.length} sitemap URLs.`);
+console.log(
+  `Product procurement coverage: ${productFiles.size}/${productFiles.size} pages checked; direct technical PDF coverage: ${technicalAssetCoverage}%.`,
+);
+console.log(`GEO baseline: ${queryRows.length} fixed queries; observation log schema present.`);
 
 if (warnings.length) {
   console.log(`\nWarnings (${warnings.length}):`);

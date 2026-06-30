@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "specs:generate": "python scripts/generate-spec-sheets.py",
     "seo:audit": "node scripts/seo-audit.mjs",
     "validate": "npm run build && npm run seo:audit"
   },

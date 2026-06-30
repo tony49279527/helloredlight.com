@@ -1,0 +1,17 @@
+claim_id,claim,scope,source_page,evidence_status,evidence_location,last_checked,owner,next_action
+ORG-001,Factory area is 10000 square meters,organization,/factory,owner_evidence_required,,2026-06-30,Operations,Attach lease audit or dated facility record
+ORG-002,Annual production capacity is 500000 units,organization,/,owner_evidence_required,,2026-06-30,Operations,Attach capacity calculation and reporting period
+ORG-003,The business serves more than 200 enterprise customers,organization,/,owner_evidence_required,,2026-06-30,Sales,Attach anonymized CRM count methodology
+ORG-004,The business holds more than 30 red light patents,organization,/,owner_evidence_required,,2026-06-30,Legal,Attach patent numbers and jurisdictions
+ORG-005,The factory has more than 10 years of manufacturing experience,organization,/factory,owner_evidence_required,,2026-06-30,Operations,Attach incorporation or dated production record
+ORG-006,The quality system is ISO 13485 certified,organization,/certifications,owner_evidence_required,,2026-06-30,Quality,Attach certificate holder number scope issuer and expiry
+REG-001,FDA records are available for applicable models,model_family,/certifications,owner_evidence_required,,2026-06-30,Regulatory,Attach exact model to record mapping
+REG-002,EU conformity records are available for applicable models,model_family,/certifications,owner_evidence_required,,2026-06-30,Regulatory,Attach declaration and certificate scope by SKU
+REG-003,FCC and RoHS reports are available for applicable models,model_family,/certifications,owner_evidence_required,,2026-06-30,Quality,Attach report numbers labs dates and covered SKUs
+PROD-001,HRL-PRO-1500 published specifications and procurement terms,product,/product-detail,published_product_page,,2026-06-30,Product,Confirm against controlled product specification
+PROD-002,HRL-PRO-300 published specifications and procurement terms,product,/mini-panel-300w,published_product_page,,2026-06-30,Product,Confirm against controlled product specification
+PROD-003,HRL-LUXOR-360 published specifications and procurement terms,product,/luxor-360-bed,published_product_page,,2026-06-30,Product,Confirm against controlled product specification
+PROD-004,HRL-MASK-SILICONE published specifications and procurement terms,product,/silicone-led-mask,published_product_page,,2026-06-30,Product,Confirm against controlled product specification
+PROD-005,HRL-TORCH published specifications and procurement terms,product,/laser-pen,published_product_page,,2026-06-30,Product,Confirm against controlled product specification
+PROD-006,HRL-BELT published specifications and procurement terms,product,/therapy-belt,published_product_page,,2026-06-30,Product,Confirm against controlled product specification
+TRUST-001,Named testimonials and quantified customer outcomes,customer_evidence,/cases,quarantined_unverified,,2026-06-30,Sales,Obtain customer authorization and supporting records before reindexing
