@@ -130,6 +130,21 @@ for (const absolute of htmlFiles) {
   if (!description) addError(file, 'missing meta description');
   if (!lang) addError(file, 'missing html lang');
   if (h1Count !== 1) addError(file, `expected one H1, found ${h1Count}`);
+  if ((file === 'index.html' || file === 'zh/index.html') && !/<main\b/i.test(content)) {
+    addError(file, 'homepage is missing a main landmark');
+  }
+  if (
+    (file === 'index.html' || file === 'zh/index.html') &&
+    /"hasOfferCatalog"/i.test(content)
+  ) {
+    addError(file, 'homepage category catalog must use ItemList, not nested Product markup');
+  }
+  if (
+    file === 'factory.html' &&
+    /"itemOffered"\s*:\s*\{\s*"@type"\s*:\s*"Product"/i.test(content)
+  ) {
+    addError(file, 'manufacturing service must not be marked up as a Product');
+  }
 
   if (!noindex) {
     if (!canonical) addError(file, 'indexable page is missing canonical');
@@ -421,6 +436,12 @@ if (!robots.includes(`Sitemap: ${siteOrigin}/sitemap.xml`)) {
 const llms = fs.readFileSync(path.join(root, 'public', 'llms.txt'), 'utf8');
 if (!llms.includes('OAI-SearchBot')) {
   warnings.push('public/llms.txt: OAI-SearchBot policy is not documented');
+}
+if (!/\[[^\]]+\]\(https:\/\/[^)]+\)/.test(llms)) {
+  errors.push('public/llms.txt: must contain crawlable Markdown links');
+}
+if (/^-\s+[^[][^:\r\n]*:\s+https?:\/\//m.test(llms)) {
+  errors.push('public/llms.txt: contains a bare URL instead of a Markdown link');
 }
 
 console.log(`SEO audit scanned ${pages.length} HTML files and ${sitemapUrls.length} sitemap URLs.`);

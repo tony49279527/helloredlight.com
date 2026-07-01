@@ -2,6 +2,17 @@ import './style.css'
 
 // 1. Reveal on Scroll Animation
 const setupRevealAnimations = () => {
+  const elements = document.querySelectorAll('.animate-reveal');
+  if (elements.length === 0) return;
+
+  if (
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    !('IntersectionObserver' in window)
+  ) {
+    elements.forEach((el) => el.classList.add('reveal-visible'));
+    return;
+  }
+
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -20px 0px'
@@ -10,13 +21,17 @@ const setupRevealAnimations = () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        entry.target.classList.remove('reveal-pending');
         entry.target.classList.add('reveal-visible');
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('.animate-reveal').forEach((el) => {
+  elements.forEach((el) => {
+    if (el.getBoundingClientRect().top > window.innerHeight * 0.9) {
+      el.classList.add('reveal-pending');
+    }
     observer.observe(el);
   });
 };

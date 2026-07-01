@@ -22,10 +22,10 @@
     @apply bg-brand-primary text-white shadow-md hover:shadow-lg hover:bg-blue-700;
   }
   .btn-accent {
-    @apply bg-brand-accent text-white shadow-md hover:shadow-lg hover:bg-orange-600;
+    @apply bg-brand-accent text-brand-dark shadow-md hover:shadow-lg hover:bg-orange-500;
   }
   .btn-secondary {
-    @apply bg-transparent border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white;
+    @apply bg-white border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white;
   }
   .btn-outline-white {
     @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark;
@@ -41,10 +41,45 @@
 /* Custom Utilities & Animations */
 @layer utilities {
   .animate-reveal {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    @apply opacity-100 translate-y-0 transition-all duration-700 ease-out;
+  }
+  .animate-reveal.reveal-pending {
+    @apply opacity-0 translate-y-8;
   }
   .reveal-visible {
     @apply opacity-100 translate-y-0;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 0.375rem;
+  background: #ffffff;
+  color: #1a1a2e;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#cookie-consent button[onclick="acceptCookies()"] {
+  background: #047857 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal,
+  .animate-reveal.reveal-pending,
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
